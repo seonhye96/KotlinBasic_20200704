@@ -18,7 +18,8 @@ class MainActivity : AppCompatActivity() {
             
             
 //            resultTxt의 내용(text 속성의 값)으로 반영(set)
-            resultTxt.text = inputContent   // 결과는 inputContent로 넣어라
+            resultTxt.text = inputContent   // 결과에 inputContent를 넣어라
+
 
         }
 
@@ -29,6 +30,23 @@ class MainActivity : AppCompatActivity() {
             Log.d("메인화면", "버튼이 눌림")
 
             Log.e("메인화면", "에러시 로그 찍을때 사용")
+
+//            코틀린 문법 / 개념 확인
+            val num1 = 10
+            num1.toString() // Int도 참수형 변수임을 확인
+            
+//            when 활용 연습
+            when (num1) {
+                10 -> {
+                    Log.d("조건문연습", "num1에 10이 있다.")
+                    Log.d("조건문연습", "num1에 10이 있을 때 둘째줄.")
+                }
+                15 -> { Log.d("조건문연습", "num1에 15가 있다.") }
+                17, 18, 19 -> { Log.d("조건문연습", "num1에 17,18,19중 하나다.") }
+                in 20..29 -> {Log.d("조건문연습", "num1에 20~29다.")}
+                else -> {Log.d("조건문연습", "그 외의 숫자")}
+            }
+
 
         }
 
